@@ -1,3 +1,48 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import Header from "../components/header.svelte";
+    import Nav from "../components/nav.svelte";
+    import Carousel from "../components/carousel.svelte";
+    import Admissions from "../components/admissions.svelte";
+    import Content from "../components/content.svelte";
+    import Partner from "../components/partner.svelte";
+    import Studentdlu from "../components/studentdlu.svelte";
+    import Footer from "../components/footer.svelte";
+
+    const images = [
+        {
+            id: "anh1",
+            path: "../src/public/carousel/anh1.jpg",
+        },
+        {
+            id: "anh2",
+            path: "../src/public/carousel/anh2.png",
+        },
+        {
+            id: "anh3",
+            path: "../src/public/carousel/anh3.png",
+        },
+    ];
+</script>
+
+<svelte:head>
+    <title>Trường đại học Đà Lạt</title>
+</svelte:head>
+
+<Header />
+<Nav />
+<section class="flex flex-col items-center">
+    <Carousel
+        {images}
+        imageWhidth={980}
+        imageSpacing={20}
+        autoplay={true}
+        autoplaySpeed={3000}
+    />
+
+    <slot />
+</section>
+<Admissions />
+<Content />
+<Partner />
+<Studentdlu />
+<Footer />
