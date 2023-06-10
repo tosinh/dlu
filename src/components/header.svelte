@@ -12,7 +12,6 @@
     ];
 
     const inforItems = [
-        { label: "logo", href: "#" },
         { label: "Cán bộ/Giảng viên", href: "#" },
         { label: "Sinh viên", href: "#" },
         { label: "Liên hệ", href: "#" },
@@ -26,14 +25,14 @@
         </div>
         <ul class="navbar-list list-header">
             {#each headerItems as item}
-                <li>
+                <li class="navbar-item">
                     <a href={item.href}>{item.label}</a>
                 </li>
             {/each}
         </ul>
         <ul class="navbar-list list-infor">
             {#each inforItems as item}
-                <li>
+                <li class="navbar-item">
                     <a href={item.href}>{item.label}</a>
                 </li>
             {/each}
@@ -60,6 +59,7 @@
     }
     .navbar-list {
         display: flex;
+        position:relative;
         width: 100%;
         margin: 0;
     }
@@ -89,5 +89,15 @@
         align-items: center;
         padding: 0 10px;
         font-size: 13px;
+    }
+    .navbar-item:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-left: 1px solid #fff;
+        height: 14px;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 </style>

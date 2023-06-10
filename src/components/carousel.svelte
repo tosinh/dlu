@@ -1,15 +1,16 @@
 <script>
-    export { flip } from "svelte/animate";
+    import { flip } from "svelte/animate";
+    import { onDestroy } from "svelte";
 
     export let images;
     export let imageWhidth = 980;
     export let imageSpacing = 20;
-    export let speed = 1000;
+    export let transitionSpeed = 500;
     export let autoplay = false;
     export let autoplaySpeed = 3000;
     let interval;
 
-    const rotaceLeft = (e) => {
+    const rotateLeft = (e) => {
         const transitioningImage = images[images.length - 1];
         document.getElementById(transitioningImage.id).style.opacity = 0;
         images = [
@@ -18,30 +19,35 @@
         ];
         setTimeout(() => {
             document.getElementById(transitioningImage.id).style.opacity = 1;
-        }, speed);
+        }, transitionSpeed);
     };
-    const rotaceRight = (e) => {
+
+    const rotateRight = (e) => {
         const transitioningImage = images[0];
         document.getElementById(transitioningImage.id).style.opacity = 0;
         images = [...images.slice(1, images.length), images[0]];
         setTimeout(() => {
             document.getElementById(transitioningImage.id).style.opacity = 1;
-        }, speed);
+        }, transitionSpeed);
     };
 
-    const startAutoplay = () => {
+    const startAutoPlay = () => {
         if (autoplay) {
-            interval = setInterval(rotaceRight, autoplaySpeed);
+            interval = setInterval(rotateLeft, autoplaySpeed);
         }
     };
 
-    const stopAutoplay = () => {
+    const stopAutoPlay = () => {
         clearInterval(interval);
     };
 
     if (autoplay) {
-        startAutoplay();
+        startAutoPlay();
     }
+
+    onDestroy(() => {
+        stopAutoPlay();
+    });
 </script>
 
 <div class="carousel-container">
@@ -52,10 +58,11 @@
                 alt={image.id}
                 id={image.id}
                 style={`width:${imageWhidth}px; 
-                margin = 0 ${imageSpacing}px;
-                on:mouseover={stopAutoplay};
-                on:mousemove={startAutoplay} 
-                animate:flip=((duration: speed))`}
+                margin = 0 ${imageSpacing}px;`}
+                on:mouseover={stopAutoPlay}
+                on:mouseout={startAutoPlay}
+                on:click={() => dispatch("imageClicked", image.path)}
+                animate:flip={{ duration: transitionSpeed }}
             />
         {/each}
     </div>

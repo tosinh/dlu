@@ -10,15 +10,15 @@
 
     const images = [
         {
-            id: "anh1",
+            id: "a1",
             path: "../src/public/carousel/anh1.jpg",
         },
         {
-            id: "anh2",
+            id: "a2",
             path: "../src/public/carousel/anh2.png",
         },
         {
-            id: "anh3",
+            id: "a3",
             path: "../src/public/carousel/anh3.png",
         },
     ];
@@ -30,17 +30,13 @@
 
 <Header />
 <Nav />
-<section class="flex flex-col items-center">
-    <Carousel
-        {images}
-        imageWhidth={980}
-        imageSpacing={20}
-        autoplay={true}
-        autoplaySpeed={3000}
-    />
-
-    <slot />
-</section>
+<Carousel
+    {images}
+    imageWhidth={980}
+    imageSpacing={20}
+    autoplay={true}
+    autoplaySpeed={3000}
+/>
 <Admissions />
 <Content />
 <Partner />
