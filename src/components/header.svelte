@@ -1,6 +1,4 @@
 <script>
-    import { onMount } from "svelte";
-
     const headerItems = [
         { label: "Khoa", href: "#" },
         { label: "Phòng", href: "#" },
@@ -23,16 +21,16 @@
         <div>
             <div class="middle-line" />
         </div>
-        <ul class="navbar-list list-header">
+        <ul class="header-list list-header">
             {#each headerItems as item}
-                <li class="navbar-item">
+                <li class="header-item">
                     <a href={item.href}>{item.label}</a>
                 </li>
             {/each}
         </ul>
-        <ul class="navbar-list list-infor">
+        <ul class="header-list list-infor">
             {#each inforItems as item}
-                <li class="navbar-item">
+                <li class="header-item">
                     <a href={item.href}>{item.label}</a>
                 </li>
             {/each}
@@ -42,7 +40,7 @@
 
 <style>
     header {
-        background-color: rgb(121, 162, 39);
+        background-color: #5f7adb;
         font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
         height: 45px;
     }
@@ -57,31 +55,31 @@
         align-items: center;
         height: 100%;
     }
-    .navbar-list {
+    .header-list {
         display: flex;
-        position:relative;
+        position: relative;
         width: 100%;
         margin: 0;
     }
     .list-infor {
         justify-content: flex-end;
     }
-    .navbar-list li {
+    .header-list li {
         list-style-type: none;
         position: relative;
     }
 
-    .navbar-list li:before {
+    .header-list li:before {
         content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 1px;
-        background-color: rgb(121, 162, 39);
+        background-color: #5f7adb;
     }
 
-    .navbar-list a {
+    .header-list a {
         color: #fff;
         text-decoration: none;
         display: flex;
@@ -90,7 +88,7 @@
         padding: 0 10px;
         font-size: 13px;
     }
-    .navbar-item:after {
+    .header-item:after {
         content: "";
         display: block;
         position: absolute;

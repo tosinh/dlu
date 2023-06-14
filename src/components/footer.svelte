@@ -246,7 +246,7 @@
 
 <style>
     footer {
-        background-color: #54880b;
+        background-color: #5f7adb;
         margin-top: 100px;
     }
     .wrap-footer {

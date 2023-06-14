@@ -3,7 +3,7 @@
     import { onDestroy } from "svelte";
 
     export let images;
-    export let imageWhidth = 980;
+    export let imageWidth = 980;
     export let imageSpacing = 20;
     export let transitionSpeed = 500;
     export let autoplay = false;
@@ -33,7 +33,7 @@
 
     const startAutoPlay = () => {
         if (autoplay) {
-            interval = setInterval(rotateLeft, autoplaySpeed);
+            interval = setInterval(rotateRight, autoplaySpeed);
         }
     };
 
@@ -57,16 +57,12 @@
                 src={image.path}
                 alt={image.id}
                 id={image.id}
-                style={`width:${imageWhidth}px; 
-                margin = 0 ${imageSpacing}px;`}
-                on:mouseover={stopAutoPlay}
-                on:mouseout={startAutoPlay}
-                on:click={() => dispatch("imageClicked", image.path)}
+                style={`width:${imageWidth}px; margin: 0 ${imageSpacing}px;`}
                 animate:flip={{ duration: transitionSpeed }}
             />
         {/each}
     </div>
-    <button id="left" on:click={rotaceLeft}>
+    <button id="left" on:click={rotateLeft}>
         <slot name="left-control">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +76,7 @@
             >
         </slot>
     </button>
-    <button id="right" on:click={rotaceRight}>
+    <button id="right" on:click={rotateRight}>
         <slot name="right-control">
             <svg
                 xmlns="http://www.w3.org/2000/svg"

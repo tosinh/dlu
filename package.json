@@ -40,6 +40,9 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
-		"flowbite-svelte": "^0.37.4"
+		"@popperjs/core": "^2.11.8",
+		"flowbite": "^1.6.5",
+		"flowbite-svelte": "^0.37.5",
+		"tailwind-merge": "^1.13.1"
 	}
 }

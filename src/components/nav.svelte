@@ -2,10 +2,11 @@
     import { onMount } from "svelte";
 
     let showMobileMenu = false;
+    export let inputValue = "";
 
     const navItems = [
         { label: "Giới thiệu", href: "#" },
-        { label: "Tin tức", href: "#" },
+        { label: "Tin tức", href: "https://dlu.edu.vn/tin-tuc/" },
         { label: "Đào tạo", href: "#" },
         { label: "Research Portal", href: "#" },
         { label: "Văn bản", href: "#" },
@@ -13,7 +14,6 @@
         { label: "Tuyển sinh", href: "#" },
         { label: "Tuyển sinh", href: "#" },
         { label: "Bản đồ Website", href: "#" },
-        { label: "Search", href: "#" },
     ];
 
     const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
@@ -77,6 +77,15 @@
                 </li>
             {/each}
         </ul>
+        <input
+            type="text"
+            placeholder="Search..."
+            autocomplete="off"
+            id="searchInput"
+            bind:value={inputValue}
+            on:input
+        />
+        <span id="search-icon">🔍</span>
     </div>
 </nav>
 
@@ -88,7 +97,7 @@
     .logo {
         width: 40px;
         height: 40px;
-        background-color: rgb(121, 162, 39);
+        background-color: #5f7adb;
         display: flex;
         border-radius: 4px;
     }
@@ -97,7 +106,7 @@
         font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
         height: 45px;
         margin: 20px 0;
-        border-top: 2px solid rgb(121, 162, 39);
+        border-top: 2px solid #5f7adb;
     }
     .inner {
         max-width: 1200px;
@@ -209,6 +218,21 @@
         align-items: center;
         padding: 0 10px;
         font-size: 13px;
+    }
+    #searchInput {
+        box-sizing: border-box;
+        font-size: 1.2rem;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+    #searchInput:focus {
+        outline: 3px solid #ddd;
+    }
+
+    #search-icon {
+        left: 10px;
+        top: 10px;
+        font-size: 1.2rem;
     }
 
     @media only screen and (min-width: 767px) {

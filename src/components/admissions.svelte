@@ -40,12 +40,12 @@
     .span-h {
         text-align: center;
         text-transform: uppercase;
-        color: rgb(122, 162, 40);
+        color: #5f7adb;
         font-size: 24px;
         font-weight: 700;
         line-height: 80px;
         margin: 20px 0;
-        border-bottom: 2px solid rgb(122, 162, 40);
+        border-bottom: 2px solid #5f7adb;
     }
     .admissions-image {
         display: flex;
@@ -54,5 +54,6 @@
     img {
         max-width: 268px;
         height: 250px;
+        box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     }
 </style>

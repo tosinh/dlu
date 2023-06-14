@@ -41,7 +41,9 @@
     </h2>
     <div class="grid grid-cols-4 gap-3">
         {#each itemStudentdlu as item (item.id)}
-            <img src={item.path} alt={item.id} />
+            <div class="img-item">
+                <img src={item.path} alt={item.id} />
+            </div>
         {/each}
     </div>
 </div>
@@ -56,15 +58,29 @@
     .span-h {
         text-align: center;
         text-transform: uppercase;
-        color: rgb(122, 162, 40);
+        color: #5f7adb;
         font-size: 24px;
         font-weight: 700;
         line-height: 80px;
         margin: 20px 0;
-        border-bottom: 2px solid rgb(122, 162, 40);
+        border-bottom: 2px solid #5f7adb;
     }
-    img {
+    .img-item {
         width: 282px;
         height: 200px;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        overflow: hidden;
+    }
+    .img-item img {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+    img:hover {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
     }
 </style>

@@ -64,12 +64,12 @@
     .span-h {
         text-align: center;
         text-transform: uppercase;
-        color: rgb(122, 162, 40);
+        color: #5f7adb;
         font-size: 24px;
         font-weight: 700;
         line-height: 80px;
         margin: 20px 0;
-        border-bottom: 2px solid rgb(122, 162, 40);
+        border-bottom: 2px solid #5f7adb;
     }
     img {
         width: 268px;
