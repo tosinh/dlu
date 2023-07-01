@@ -21,10 +21,8 @@
     <NavUl {hidden}>
         <NavLi href="/about">Home</NavLi>
         <NavLi href="/" active={true}>Trang chủ</NavLi>
-        <NavLi href="/services">Giới thiệu</NavLi>
-        <NavLi href="/pricing">Tin tức</NavLi>
-        <NavLi href="/contact">Tuyển sinh</NavLi>
-        <NavLi href="/contact">Cộng đồng sinh viên</NavLi>
+        <NavLi href="#">Tuyển sinh</NavLi>
+        <NavLi href="#">Tin tức</NavLi>
     </NavUl>
     <div class="flex md:order-2">
         <Button
