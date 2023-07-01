@@ -22,7 +22,7 @@
         <NavLi href="/about">Home</NavLi>
         <NavLi href="/" active={true}>Trang chủ</NavLi>
         <NavLi href="#">Tuyển sinh</NavLi>
-        <NavLi href="#">Tin tức</NavLi>
+        <NavLi href="#tintuc">Tin tức</NavLi>
     </NavUl>
     <div class="flex md:order-2">
         <Button
