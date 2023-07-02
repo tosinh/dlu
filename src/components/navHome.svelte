@@ -13,14 +13,20 @@
 <Navbar let:hidden let:toggle>
     <NavBrand href="/">
         <img
-            src="../src/public/home/logo.png"
-            class="mr-3 h-10 sm:h-24"
-            alt="dlu Logo"
+            src="../src/public/home/logodlu.png"
+            class="mr-3 h-6 sm:h-9"
+            alt="DLU Logo"
         />
+        <span
+            class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
+        >
+            DALAT UNIVERSITY
+        </span>
     </NavBrand>
     <NavUl {hidden}>
         <NavLi href="/about" target="_blank">Home</NavLi>
-        <NavLi href="/" active={true}>Trang chủ</NavLi>
+        <NavLi href="/">Trang chủ</NavLi>
+        <NavLi href="#gioithieu">Giới thiệu</NavLi>
         <NavLi href="#tintuc">Tin tức</NavLi>
     </NavUl>
     <div class="flex md:order-2">

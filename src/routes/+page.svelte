@@ -5,6 +5,7 @@
     import { images } from "../routes/data.js";
     import Sidebar from "../components/sidebarHome.svelte";
     import SpeedDial from "../components/speedDial.svelte";
+    import GioiThieu from "../components/gioithieu.svelte";
     import TinTuc from "../components/tintuc.svelte";
     import InfiniteLogo from "../components/infiniteLogo.svelte";
     import Footer from "../components/footerHome.svelte";
@@ -15,6 +16,7 @@
 </script>
 
 <svelte:head>
+    <link rel="shortcut icon" href="../src/public/home/logodlu.png" />
     <title>Trường đại học Dầ Lạt</title>
 </svelte:head>
 <!-- <DarkMode {btnClass} /> -->
@@ -29,7 +31,10 @@
     <div class="max-w-6xl m-auto z-0">
         <Carousel {images} loop {showCaptions} {showThumbs} duration="3000" />
     </div>
-    <div id="tintuc" class="max-w-6xl ml-32 my-10">
+    <div id="gioithieu" class="max-w-6xl ml-32 my-10 mt-24">
+        <GioiThieu />
+    </div>
+    <div id="tintuc" class="max-w-6xl ml-32 my-10 mt-24">
         <TinTuc />
     </div>
     <div><InfiniteLogo /></div>
