@@ -35,6 +35,21 @@
                     <SidebarDropdownItem label="Ban Giám hiệu" href="" />
                 </SidebarDropdownWrapper>
             </SidebarDropdownWrapper>
+            <SidebarDropdownWrapper label="Tuyển sinh">
+                <SidebarDropdownItem
+                    label="Tuyển sinh Thạc sĩ, Tiến sĩ"
+                    href=""
+                />
+                <SidebarDropdownItem
+                    label="Tuyển sinh Đại học hệ chính quy"
+                    href=""
+                />
+                <SidebarDropdownItem
+                    label="Hệ liên thông vừa làm vừa học văn bằng 2"
+                    href=""
+                />
+                <SidebarDropdownItem label="Các khóa học ngắn hạn" href="" />
+            </SidebarDropdownWrapper>
             <SidebarDropdownWrapper label="Đào tạo">
                 <SidebarDropdownItem label="Tiến sĩ" href="" />
                 <SidebarDropdownItem label="Thạc sĩ" href="" />

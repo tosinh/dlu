@@ -6,6 +6,8 @@
     import Sidebar from "../components/sidebarHome.svelte";
     import SpeedDial from "../components/speedDial.svelte";
     import TinTuc from "../components/tintuc.svelte";
+    import InfiniteLogo from "../components/infiniteLogo.svelte";
+    import Footer from "../components/footerHome.svelte";
     let btnClass =
         "float-right text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2";
     let showThumbs = false;
@@ -30,7 +32,11 @@
     <div id="tintuc" class="max-w-6xl ml-32 my-10">
         <TinTuc />
     </div>
+    <div><InfiniteLogo /></div>
 </main>
-<div class="fixed bottom-0 right-0">
+<div class="fixed bottom-0 right-0 z-50">
     <SpeedDial />
 </div>
+<footer class="">
+    <Footer />
+</footer>
