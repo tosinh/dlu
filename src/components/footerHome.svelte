@@ -13,12 +13,16 @@
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
     <div class="flex md:flex md:justify-around">
         <div class="mb-6 md:mb-0">
-            <img
+            <a
                 href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+H%E1%BB%8Dc+%C4%90%C3%A0+L%E1%BA%A1t/@11.9533848,108.4354931,15z/data=!4m6!3m5!1s0x317112d959f88991:0x9c66baf1767356fa!8m2!3d11.9545604!4d108.4442049!16s%2Fm%2F02rtwnx?entry=ttu"
-                src="../src/public/home/map.png"
-                alt="MapDLu"
-                class="w-72"
-            />
+                target="_blank"
+            >
+                <img
+                    src="../src/public/home/map.png"
+                    alt="MapDLu"
+                    class="w-72"
+                />
+            </a>
         </div>
 
         <div>
